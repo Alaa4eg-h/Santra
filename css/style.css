@@ -18,6 +18,13 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -36,9 +43,10 @@ img {
   width: 100%;
   height: 100%;
 }
+
 /* NAV STYLE */
 .navbar {
-  width: 300px;
+  width: 25%;
   height: 100%;
   background: rgba(12, 12, 12, 0.9);
   position: fixed;
@@ -56,6 +64,7 @@ img {
   justify-content: space-between;
   flex-direction: column;
 }
+
 .navbar__logo {
   height: 150px;
   width: 100%;
@@ -83,6 +92,24 @@ img {
   font-weight: normal;
 }
 
+.navbar__toggle {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar__toggle .bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+}
+
+.navbar__toggle .bar:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 .navbar__list {
   width: 80%;
   margin: 0 auto;
@@ -91,6 +118,7 @@ img {
 .navbar__item:not(:last-child) {
   margin-bottom: 2rem;
 }
+
 .navbar__link {
   color: #fff;
   font-size: 1.4rem;
@@ -102,6 +130,7 @@ img {
 .navbar__link:hover .circle {
   background: #fff;
 }
+
 .navbar__link:hover .line {
   width: 50px;
 }
@@ -154,6 +183,56 @@ img {
   color: #45489a;
 }
 
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 80px;
+  }
+
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar__logo,
+  .navbar__social {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__list {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .circle,
+  .line {
+    display: none !important;
+  }
+
+}
+
 /* END NAV STYLE */
 
 /* START HEADER STYLES */
@@ -165,6 +244,7 @@ img {
 .header__content {
   height: inherit;
 }
+
 .header__slider {
   position: relative;
   height: inherit;
@@ -201,15 +281,109 @@ img {
 }
 
 .btn {
-  width: 80px;
+  width: 100px;
   height: 40px;
   border: none;
   outline: none;
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  font-size: 1.6rem;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
   text-transform: uppercase;
+  margin-left: auto;
+  color: #45489a;
+  transition: all 0.3s ease;
 }
+
+.btn:hover {
+  background: #45489a;
+  color: #fff;
+}
+
+.header__control {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control__btn {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  transition: alla 0.3s ease;
+}
+
+.control__btn:hover .control__icon {
+  animation-play-state: paused;
+  opacity: 1;
+}
+
+.control__icon {
+  transition: all 0.3s ease;
+  animation: control-lighten 3s infinite 0.5s;
+}
+
+@keyframes control-lighten {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.control--btn:hover .control__icon {
+  color: #fff;
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .header__text {
+    width: 55%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .header__text {
+    width: 100%;
+    padding: 0 2.5rem;
+    text-align: center;
+    right: 0;
+  }
+
+  .btn {
+    margin: auto;
+  }
+
+  .header__control {
+    top: 600px;
+  }
+}
+
+
 /* END HEADER STYLES */
