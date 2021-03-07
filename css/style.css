@@ -415,7 +415,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
 }
 
 .section__desc {
@@ -442,7 +442,7 @@ section {
   justify-content: space-between;
   position: absolute;
   top: 120px;
-  right: 20px;
+  right: 62px;
   width: 110px;
 }
 
@@ -507,7 +507,6 @@ section {
   margin-bottom: 5px;
 }
 
-
 .features__slider__subtitle {
   color: #7a7a7a;
   font-size: 1.4rem;
@@ -569,3 +568,55 @@ section {
 }
 
 /* END PROJETCS STYLES */
+
+/* START PRESENTATION STYLES */
+.presentation {
+  background: #f4f4f4;
+}
+.presentation__heading {
+  text-align: center;
+}
+
+.presentation__header {
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.presentation__header span {
+  font-weight: 700;
+  color: #45489a;
+}
+
+.presentation__desc {
+  margin-bottom: 2rem;
+}
+
+.btn--purpple {
+  margin: 0 auto 3rem;
+  width: 160px;
+  background: #45489a;
+  color: #fff;
+}
+
+.presentaion__vedio {
+  position: relative;
+}
+
+.vedio__play__btn {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  font-size: 2rem;
+  color: #000;
+  background: #f4f4f4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* END PRESENTATION STYLES */
