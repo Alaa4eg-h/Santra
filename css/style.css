@@ -37,6 +37,12 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.3rem;
+  color: #7a7a7a;
+  line-height: 2.4rem;
+}
+
 img {
   display: block;
   width: 100%;
@@ -398,10 +404,27 @@ section {
 /* END HEADER STYLES */
 
 /* START FEAUTERS STYLES */
-.section__heading {
-  margin-bottom: 3rem;
+
+.features {
+  position: relative;
+  border-bottom: 1px solid #eee;
 }
 
+.section__heading {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.section__desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #343434;
+  width: 70%;
+  line-height: 1.6;
+}
 
 .section__header {
   font-size: 3.5rem;
@@ -411,6 +434,110 @@ section {
 .section__header span {
   font-weight: 700;
   color: #45489a;
+}
+
+.slider__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  width: 110px;
+}
+
+.slider__control .control__btn {
+  background: #eee;
+}
+
+.slider__control .control__icon {
+  color: #232323;
+}
+
+.control__btn:hover {
+  background: #45489a;
+}
+
+.control__btn:hover .control__icon {
+  color: #eee;
+}
+
+.features__content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(calc(100% / 3 - 2rem), 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 3rem;
+  overflow: hidden;
+}
+
+.features__slider__image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.features__slider__image__cta {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #45489a;
+  text-align: center;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.features__slider__image:hover .features__slider__image__cta {
+  bottom: 0;
+  opacity: 1;
+}
+
+.features__slider__title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 5px;
+}
+
+
+.features__slider__subtitle {
+  color: #7a7a7a;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.slider__bullets {
+  margin-top: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #cdcdcd;
+  cursor: pointer;
+}
+
+.bullet:not(:last-child) {
+  margin-right: 5px;
+}
+
+.bullet.active {
+  background: #45489a;
 }
 
 /* END FEAUTERS STYLES */
