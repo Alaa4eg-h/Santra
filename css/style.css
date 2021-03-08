@@ -705,7 +705,18 @@ section {
   flex-direction: column;
 }
 
-.contact__input {
+.input__group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input__group:first-of-type {
+  margin-bottom: 3rem;
+}
+
+.contact__input,
+.textarea {
   border: 1px solid #eee;
   background: #eee;
   padding: 1.5rem;
@@ -713,6 +724,45 @@ section {
   border-radius: 2px;
 }
 
+.contact__input {
+  width: calc(100% / 3);
+}
 
+.contact__input:not(:last-child) {
+  margin-right: 2rem;
+}
 
+.input__group:last-of-type {
+  flex-direction: column;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  margin-bottom: 3rem;
+}
+
+.contact__btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 /* END CONTACT STYLES */
+
+/* START FOOTER STYLES */
+
+.footer {
+  background: rgba(12, 12, 12, 0.9);
+  padding: 3rem;
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #eee;
+}
+/* END FOOTER STYLES */
